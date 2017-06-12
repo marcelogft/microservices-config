@@ -4,13 +4,8 @@ endpoints:
   shutdown:
     enabled: true
   health:
-    sensitive: false
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/ 
-
+    sensitive: false 
+    
 hystrix:
   command: 
     default: 
