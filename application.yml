@@ -28,7 +28,33 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
 
+ribbon:
+  eureka:
+    enabled: true
+    
 management:
   security:
     enabled: false  
   context-path: /private                 
+  health:
+    binders: 
+      enabled: true
+      
+endpoints: 
+  enabled: false
+  health: 
+    enabled: true
+  env: 
+    enabled: true
+  metrics: 
+    enabled: true
+  info:
+    enabled: true
+  jolokia: 
+    enabled:  true
+  jmx:
+    enabled: true 
+  dump:
+    enabled: true
+  trace:
+    enabled: true    
