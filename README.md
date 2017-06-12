@@ -1,2 +1,2 @@
 # microservices-config
-Configuration report 
+Configuration repository
