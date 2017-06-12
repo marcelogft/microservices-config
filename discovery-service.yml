@@ -13,6 +13,4 @@ eureka:
     eviction-interval-timer-in-ms: 500    
   instance:
     nonSecurePort: 8761
-    hostname: localhost
-  client:
-    register-with-eureka: false
+    hostname: discovery
