@@ -1,0 +1,45 @@
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/ 
+
+hystrix:
+  command: 
+    default: 
+      execution: 
+        isolation: 
+          thread:
+            timeoutInMilliseconds: 50000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 50000
+  eureka:
+    enabled: true
+
+management:
+  add-application-context-header: false
+security:
+  enable-csrf: false 
+
+zuul:
+  add-proxy-headers: true
+  ignoredServices: '*'
+  ignoredPatterns: /**/private/**
+  routes:     
+    discovery:
+      path: /eureka/**
+      serviceId: discovery
+      stripPrefix: false
+    hystrix:
+      path: /hystrix/**
+      serviceId: hystrix
+      stripPrefix: false 
+    

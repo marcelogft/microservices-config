@@ -1,0 +1,34 @@
+info:
+  name: ${spring.application.name}
+  build:
+    artifact: ${project.artifactId}
+    name: ${project.name}
+    description: ${project.description}
+    version: ${project.version}
+    
+spring:
+  cloud:  
+    stream:
+      kafka:
+        binder:
+          brokers: kafka
+          zkNodes: kafka
+
+eureka:   
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      managementPath: ${server.contextPath:/}private/
+      management:
+        context-path: ${server.contextPath:/}private/
+    statusPageUrlPath: ${server.contextPath:/}private/info
+    healthCheckUrlPath: ${server.contextPath:/}private/health
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+
+management:
+  security:
+    enabled: false  
+  context-path: /private                 
