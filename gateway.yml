@@ -32,9 +32,5 @@ zuul:
     discovery:
       path: /eureka/**
       serviceId: discovery
-      stripPrefix: false
-    hystrix:
-      path: /hystrix/**
-      serviceId: hystrix
       stripPrefix: false 
     
