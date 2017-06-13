@@ -1,0 +1,12 @@
+spring:  
+  data:
+    mongodb:
+      host: movementsdb
+      port: 27017
+      database: movements 
+  cloud: 
+    stream:
+      bindings: 
+        output:
+          destination: movements
+          content-type: application/json
