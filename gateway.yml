@@ -38,7 +38,7 @@ zuul:
       serviceId: customers
       stripPrefix: false  
     movements:
-      path: /movements/**    
-      serviceId: customers
+      path: /movement/**    
+      serviceId: movements
       stripPrefix: false    
     
