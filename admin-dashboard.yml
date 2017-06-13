@@ -27,6 +27,6 @@ hystrix:
     coreSize: 10      
  
 turbine: 
-  appConfig: discovery, timeline, products, orders, customers    
+  appConfig: discovery, customers, movements    
   clusterNameExpression: "'default'"
   instanceUrlSuffix.default: /private/hystrix.stream
