@@ -3,9 +3,9 @@ spring:
     admin: 
       routes: 
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,refresh,loggers,hystrix.stream,activiti,turbine.stream
-    turbine: 
-      clusters: default
-      location: admin-dashboard
+      turbine: 
+        clusters: default
+        location: admin-dashboard
   
 hystrix:
   command:
