@@ -21,8 +21,6 @@ ribbon:
 
 management:
   add-application-context-header: false
-  security: 
-    enabled: false
 security:
   enable-csrf: false 
 
