@@ -33,6 +33,10 @@ zuul:
       path: /eureka/**
       serviceId: discovery
       stripPrefix: false 
+    report:
+      path: /customers/*/report/**
+      serviceId: report
+      servicePrefix: false
     customers:
       path: /customers/**    
       serviceId: customers
