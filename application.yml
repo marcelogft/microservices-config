@@ -62,7 +62,8 @@ endpoints:
 logging:
   level:
     root: INFO
-    com.netflix.discovery: 'OFF'    
+    com.netflix.discovery: 'OFF'
+    org.apache.kafka.clients.consumer: 'OFF'    
     kafka.common: 'OFF'
     clients.consumer: 'OFF'
     apache.kafka: 'OFF'
