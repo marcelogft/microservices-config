@@ -57,4 +57,13 @@ endpoints:
   dump:
     enabled: true
   trace:
-    enabled: true    
+    enabled: true
+ 
+logging:
+  level:
+    root: INFO
+    com.netflix.discovery: 'OFF'    
+    kafka.common: 'OFF'
+    clients.consumer: 'OFF'
+    apache.kafka: 'OFF'
+        
