@@ -16,6 +16,9 @@ spring:
   sleuth:
     sampler:
       percentage: 0.2
+  zipkin:
+    baseUrl: http://zipkin-server:9411
+    
 eureka:   
   instance:
     leaseRenewalIntervalInSeconds: 10
